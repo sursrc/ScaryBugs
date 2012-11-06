@@ -15,6 +15,12 @@
 		D6462AD31648ABC2005868A4 /* potatoBugThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6462ACB1648ABC2005868A4 /* potatoBugThumb.jpg */; };
 		D6462AD41648ABC2005868A4 /* wolfSpider.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6462ACC1648ABC2005868A4 /* wolfSpider.jpg */; };
 		D6462AD51648ABC2005868A4 /* wolfSpiderThumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6462ACD1648ABC2005868A4 /* wolfSpiderThumb.jpg */; };
+		D6462B1B1649132C005868A4 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6462B1A1649132C005868A4 /* RateView.m */; };
+		D6462B1F16491365005868A4 /* UIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = D6462B1E16491365005868A4 /* UIImageExtras.m */; };
+		D6462B2416491386005868A4 /* shockedface2_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = D6462B2116491386005868A4 /* shockedface2_empty.png */; };
+		D6462B2516491386005868A4 /* shockedface2_full.png in Resources */ = {isa = PBXBuildFile; fileRef = D6462B2216491386005868A4 /* shockedface2_full.png */; };
+		D6462B2616491386005868A4 /* shockedface2_half.png in Resources */ = {isa = PBXBuildFile; fileRef = D6462B2316491386005868A4 /* shockedface2_half.png */; };
+		D6462B2816491399005868A4 /* logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = D6462B2716491399005868A4 /* logo1.png */; };
 		D66C2EC91647BDE300637073 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66C2EC81647BDE300637073 /* UIKit.framework */; };
 		D66C2ECB1647BDE300637073 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66C2ECA1647BDE300637073 /* Foundation.framework */; };
 		D66C2ECD1647BDE300637073 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66C2ECC1647BDE300637073 /* CoreGraphics.framework */; };
@@ -40,6 +46,14 @@
 		D6462ACB1648ABC2005868A4 /* potatoBugThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = potatoBugThumb.jpg; path = images/potatoBugThumb.jpg; sourceTree = "<group>"; };
 		D6462ACC1648ABC2005868A4 /* wolfSpider.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wolfSpider.jpg; path = images/wolfSpider.jpg; sourceTree = "<group>"; };
 		D6462ACD1648ABC2005868A4 /* wolfSpiderThumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wolfSpiderThumb.jpg; path = images/wolfSpiderThumb.jpg; sourceTree = "<group>"; };
+		D6462B191649132C005868A4 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RateView.h; path = ExtraStuffForScaryBugs/RateView.h; sourceTree = "<group>"; };
+		D6462B1A1649132C005868A4 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RateView.m; path = ExtraStuffForScaryBugs/RateView.m; sourceTree = "<group>"; };
+		D6462B1D16491365005868A4 /* UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIImageExtras.h; path = ExtraStuffForScaryBugs/UIImageExtras.h; sourceTree = "<group>"; };
+		D6462B1E16491365005868A4 /* UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIImageExtras.m; path = ExtraStuffForScaryBugs/UIImageExtras.m; sourceTree = "<group>"; };
+		D6462B2116491386005868A4 /* shockedface2_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shockedface2_empty.png; path = ExtraStuffForScaryBugs/shockedface2_empty.png; sourceTree = "<group>"; };
+		D6462B2216491386005868A4 /* shockedface2_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shockedface2_full.png; path = ExtraStuffForScaryBugs/shockedface2_full.png; sourceTree = "<group>"; };
+		D6462B2316491386005868A4 /* shockedface2_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shockedface2_half.png; path = ExtraStuffForScaryBugs/shockedface2_half.png; sourceTree = "<group>"; };
+		D6462B2716491399005868A4 /* logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo1.png; path = ExtraStuffForScaryBugs/logo1.png; sourceTree = "<group>"; };
 		D66C2EC41647BDE300637073 /* ScaryBugs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScaryBugs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66C2EC81647BDE300637073 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D66C2ECA1647BDE300637073 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,6 +92,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D6462B1716491300005868A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6462B191649132C005868A4 /* RateView.h */,
+				D6462B1A1649132C005868A4 /* RateView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D6462B1C16491346005868A4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D6462B1D16491365005868A4 /* UIImageExtras.h */,
+				D6462B1E16491365005868A4 /* UIImageExtras.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D6462B2016491376005868A4 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				D6462B2716491399005868A4 /* logo1.png */,
+				D6462B2116491386005868A4 /* shockedface2_empty.png */,
+				D6462B2216491386005868A4 /* shockedface2_full.png */,
+				D6462B2316491386005868A4 /* shockedface2_half.png */,
+			);
+			name = Art;
+			sourceTree = "<group>";
+		};
 		D66C2EB91647BDE200637073 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +151,9 @@
 		D66C2ECE1647BDE300637073 /* ScaryBugs */ = {
 			isa = PBXGroup;
 			children = (
+				D6462B2016491376005868A4 /* Art */,
+				D6462B1C16491346005868A4 /* Helpers */,
+				D6462B1716491300005868A4 /* Views */,
 				D66C2EEF1647BE7300637073 /* Model */,
 				D66C2EEE1647BE4500637073 /* GUI */,
 				D66C2ECF1647BDE300637073 /* Supporting Files */,
@@ -226,6 +272,10 @@
 				D6462AD31648ABC2005868A4 /* potatoBugThumb.jpg in Resources */,
 				D6462AD41648ABC2005868A4 /* wolfSpider.jpg in Resources */,
 				D6462AD51648ABC2005868A4 /* wolfSpiderThumb.jpg in Resources */,
+				D6462B2416491386005868A4 /* shockedface2_empty.png in Resources */,
+				D6462B2516491386005868A4 /* shockedface2_full.png in Resources */,
+				D6462B2616491386005868A4 /* shockedface2_half.png in Resources */,
+				D6462B2816491399005868A4 /* logo1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +292,8 @@
 				D66C2EE81647BDE300637073 /* DetailViewController.m in Sources */,
 				D66C2EF21647BEC900637073 /* ScaryBugData.m in Sources */,
 				D66C2EF51647C0DB00637073 /* ScaryBugDoc.m in Sources */,
+				D6462B1B1649132C005868A4 /* RateView.m in Sources */,
+				D6462B1F16491365005868A4 /* UIImageExtras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

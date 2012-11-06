@@ -71,24 +71,34 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Detail view content goes here" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="27">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" size="system"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBa-0R-6T8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="281" id="Rb0-4A-WtA"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="brg-f1-Oau">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5b-gL-Gom">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="27" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" type="default" id="7cE-gL-0wv"/>
-                            <constraint firstItem="27" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="R0m-z7-TWk"/>
-                            <constraint firstAttribute="trailing" secondItem="27" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="pRe-qY-58T"/>
+                            <constraint firstItem="brg-f1-Oau" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9sX-8V-C5f"/>
+                            <constraint firstAttribute="trailing" secondItem="H5b-gL-Gom" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JbM-En-agN"/>
+                            <constraint firstItem="mBa-0R-6T8" firstAttribute="top" secondItem="22" secondAttribute="top" constant="81" id="ReP-92-X04"/>
+                            <constraint firstAttribute="trailing" secondItem="mBa-0R-6T8" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="a1f-th-bzP"/>
+                            <constraint firstItem="brg-f1-Oau" firstAttribute="top" secondItem="22" secondAttribute="top" constant="20" symbolic="YES" type="default" id="eVc-zt-IFB"/>
+                            <constraint firstItem="mBa-0R-6T8" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="erp-Kb-yTo"/>
+                            <constraint firstAttribute="trailing" secondItem="brg-f1-Oau" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gg8-ZB-kMF"/>
+                            <constraint firstItem="H5b-gL-Gom" firstAttribute="top" secondItem="22" secondAttribute="top" constant="393" id="lC8-Er-5Th"/>
+                            <constraint firstItem="H5b-gL-Gom" firstAttribute="leading" secondItem="22" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vKf-R6-Dkz"/>
+                            <constraint firstAttribute="bottom" secondItem="H5b-gL-Gom" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="yTe-3S-oLg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="26"/>
-                    <connections>
-                        <outlet property="detailDescriptionLabel" destination="27" id="28"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23" sceneMemberID="firstResponder"/>
             </objects>
