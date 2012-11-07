@@ -2,6 +2,7 @@
 #import "ScaryBugData.h"
 #import "ScaryBugDoc.h"
 #import "UIImageExtras.h"
+#import "SVProgressHUD.h"
 
 @interface DetailViewController ()
 - (void)configureView;
@@ -61,12 +62,24 @@
 
 - (IBAction)addPictureTapped:(id)sender {
     if (self.picker == nil) {
-        self.picker = [[UIImagePickerController alloc] init];
-        self.picker.delegate = self;
-        self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        self.picker.allowsEditing = NO;
+        [SVProgressHUD showWithStatus:@"Loading picker.."];
+        
+        dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        
+        dispatch_async(concurrentQueue, ^{
+            self.picker = [[UIImagePickerController alloc] init];
+            self.picker.delegate = self;
+            self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            self.picker.allowsEditing = NO;
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.navigationController presentModalViewController:_picker animated:YES];
+                [SVProgressHUD dismiss];
+            });
+        });
+    } else {
+        [self.navigationController presentModalViewController:_picker animated:YES];
     }
-    [self.navigationController presentModalViewController:_picker animated:YES];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -75,12 +88,22 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [self dismissModalViewControllerAnimated:YES];
+    UIImage *fullImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
     
-    UIImage *fullImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
-    UIImage *thumbImage = [fullImage imageByScalingAndCroppingForSize:CGSizeMake(44, 44)];
-    self.detailItem.fullImage = fullImage;
-    self.detailItem.thumbImage = thumbImage;
-    self.imageView.image = fullImage;
+    [SVProgressHUD showWithStatus:@"Resizing image..."];
+    
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(concurrentQueue, ^{
+        UIImage *thumbImage = [fullImage imageByScalingAndCroppingForSize:CGSizeMake(44, 44)];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.detailItem.fullImage = fullImage;
+            self.detailItem.thumbImage = thumbImage;
+            self.imageView.image = fullImage;
+            [SVProgressHUD dismiss];
+        });
+    });
 }
 
 - (IBAction)titleFieldTextChanged:(id)sender {
