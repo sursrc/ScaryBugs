@@ -2,6 +2,7 @@
 #import "DetailViewController.h"
 #import "ScaryBugDoc.h"
 #import "ScaryBugData.h"
+#import "DetailViewController.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -11,6 +12,10 @@
 @implementation MasterViewController
 
 @synthesize bugs = _bugs;
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
 
 - (void)awakeFromNib
 {
@@ -77,11 +82,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
-    }
+    DetailViewController *detailController = segue.destinationViewController;
+    ScaryBugDoc *bug = [self.bugs objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    detailController.detailItem = bug;
 }
 
 @end
